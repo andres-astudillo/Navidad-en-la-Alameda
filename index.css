@@ -481,6 +481,26 @@ section {
     box-shadow: var(--shadow-lg);
 }
 
+.event-featured {
+    border: 2px solid var(--color-secondary);
+    background: linear-gradient(135deg, rgba(218, 165, 32, 0.1) 0%, rgba(139, 0, 0, 0.1) 100%);
+}
+
+.featured-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-light) 100%);
+    color: var(--color-bg);
+    padding: 4px 16px;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 12px rgba(218, 165, 32, 0.4);
+}
+
 .event-icon {
     width: 64px;
     height: 64px;
@@ -530,10 +550,137 @@ section {
 }
 
 /* ========================================
+   Bolsas Navideñas Section
+   ======================================== */
+.bolsas-section {
+    background: linear-gradient(180deg, var(--color-bg-secondary) 0%, var(--color-bg) 100%);
+}
+
+.bolsas-info {
+    background: var(--color-bg-card);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.bolsas-info h3 {
+    color: var(--color-secondary-light);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-sm);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.item {
+    background: rgba(218, 165, 32, 0.1);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--color-secondary);
+    font-weight: 500;
+}
+
+.vouchers-section {
+    margin-top: var(--spacing-2xl);
+}
+
+.vouchers-section h3 {
+    color: var(--color-secondary-light);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+    text-align: center;
+}
+
+.vouchers-section>p {
+    text-align: center;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-xl);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vouchers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.voucher-card {
+    background: var(--color-bg-card);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    text-align: center;
+    transition: all var(--transition-base);
+}
+
+.voucher-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-secondary);
+    box-shadow: 0 8px 32px rgba(218, 165, 32, 0.3);
+}
+
+.voucher-card.featured {
+    border: 2px solid var(--color-secondary);
+    background: linear-gradient(135deg, rgba(218, 165, 32, 0.15) 0%, rgba(139, 0, 0, 0.1) 100%);
+}
+
+.voucher-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.voucher-card h4 {
+    color: var(--color-secondary-light);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.voucher-amount {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--spacing-sm);
+}
+
+.voucher-desc {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.vouchers-message {
+    background: linear-gradient(135deg, rgba(139, 0, 0, 0.2) 0%, rgba(218, 165, 32, 0.2) 100%);
+    border-left: 4px solid var(--color-secondary);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    color: var(--color-text);
+    font-style: italic;
+    text-align: center;
+    max-width: 800px;
+    margin: var(--spacing-xl) auto 0;
+}
+
+/* ========================================
    CTA Section
    ======================================== */
 .cta-section {
-    background: linear-gradient(180deg, var(--color-bg-secondary) 0%, var(--color-bg) 100%);
+    background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-secondary) 100%);
 }
 
 .cta-card {
@@ -618,7 +765,7 @@ section {
    Contact Section
    ======================================== */
 .contact {
-    background: var(--color-bg);
+    background: var(--color-bg-secondary);
 }
 
 .contact-grid {
@@ -670,7 +817,7 @@ section {
    Footer
    ======================================== */
 .footer {
-    background: var(--color-bg-secondary);
+    background: var(--color-bg);
     padding: var(--spacing-2xl) 0 var(--spacing-lg);
     border-top: 1px solid var(--color-border);
 }
@@ -842,5 +989,13 @@ section {
 
     .whatsapp-tooltip {
         display: none;
+    }
+
+    .vouchers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .items-grid {
+        grid-template-columns: 1fr;
     }
 }
