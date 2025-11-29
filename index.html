@@ -5,60 +5,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Navidad en Mendoza - El abrazo que une a la Ciudad. Descubre todos los eventos especiales: Navidad Nuestra, Deseo de Navidad, Cas Abiertas y más. Iglesia de la Alameda.">
-    <title>Navidad en Mendoza - Un reencuentro de esperanza</title>
+        content="Navidad en Mendoza 2025 - Un reencuentro de esperanza. Celebramos la Navidad en familia, comunidad y con fe.">
+    <title>Navidad en Mendoza 2025 - Un reencuentro de esperanza</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="logo-textured.png" alt="Navidad en Mendoza" class="nav-logo">
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#bolsas">Bolsas Navideñas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span class="badge-icon">✨</span>
-                <span>Diciembre 2025</span>
-            </div>
-            <div class="hero-logo">
-                <img src="img/Logo Solo Navidad Gold vr 2.svg" alt="Navidad en Mendoza" class="logo-image">
-            </div>
-            <p class="hero-subtitle">
-                Un reencuentro de esperanza. Celebramos la Navidad en familia, comunidad y con fe.<br>
-            </p>
-            <div class="hero-cta">
-                <a href="#eventos" class="btn btn-primary">
-                    <span>Ver Eventos</span>
-                    <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </a>
-                <a href="#contacto" class="btn btn-secondary">
-                    <span>Contáctanos</span>
-                </a>
+    <section class="hero-fullscreen" id="inicio">
+        <div class="hero-background">
+            <img src="bg-red-4k.jpg" alt="Background" class="hero-bg-image">
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-content-center">
+            <img src="hoja-textured.png" alt="Decoración" class="hero-leaf-decoration">
+            <img src="logo-textured.png" alt="Navidad en Mendoza" class="hero-logo-large">
+            <h1 class="hero-title">Un reencuentro de esperanza</h1>
+            <p class="hero-subtitle">Celebramos la Navidad en familia, comunidad y con fe</p>
+            <p class="hero-date">Diciembre 2025 | Mendoza, Argentina</p>
+            <div class="hero-buttons">
+                <a href="#eventos" class="btn btn-primary-hero">Ver Eventos</a>
+                <a href="#video" class="btn btn-secondary-hero">Ver Video</a>
             </div>
         </div>
-        <div class="hero-decoration">
-            <div class="snowflake"></div>
-            <div class="snowflake"></div>
-            <div class="snowflake"></div>
-            <div class="snowflake"></div>
-            <div class="snowflake"></div>
+
+        <div class="scroll-indicator">
+            <span>Descubre más</span>
+            <div class="scroll-arrow"></div>
         </div>
     </section>
 
     <!-- Welcome Section -->
-    <section class="welcome" id="bienvenida">
+    <section class="welcome-section fade-in-scroll">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Bienvenidos</span>
-                <h2 class="section-title">Navidad en Mendoza</h2>
-                <p class="section-description">
+            <div class="section-header-center">
+                <h2 class="section-title-large">Bienvenidos a Navidad en Mendoza</h2>
+                <p class="section-description-large">
                     La Iglesia de la Alameda te invita a vivir una Navidad extraordinaria con eventos culturales,
                     artísticos y solidarios que iluminan nuestra ciudad. Desde propuestas folclóricas hasta espectáculos
                     con teatro, música y danza, cada experiencia está diseñada para celebrar juntos el verdadero
@@ -69,373 +83,351 @@
     </section>
 
     <!-- Events Section -->
-    <section class="events" id="eventos">
+    <section class="events-section" id="eventos">
+        <div class="parallax-layer"></div>
+
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Nuestros Eventos</span>
-                <h2 class="section-title">Experiencias de Navidad</h2>
+            <div class="section-header-center fade-in-scroll">
+                <h2 class="section-title-large">Experiencias de Navidad</h2>
+                <p class="section-subtitle">Eventos especiales para toda la familia</p>
             </div>
 
-            <div class="events-grid">
+            <div class="events-grid-new">
                 <!-- Event Card 1 - Navidad Nuestra -->
-                <div class="event-card">
-                    <div class="event-image">
-                        <img src="evento-navidad-nuestra.jpg" alt="Navidad Nuestra">
-                        <div class="event-category">Especial Coral</div>
+                <div class="event-card-new fade-in-scroll" data-delay="100">
+                    <div class="event-image-new">
+                        <img src="evento-navidad-nuestra.jpg" alt="Navidad Nuestra"
+                            onerror="this.src='https://via.placeholder.com/600x400/8B0000/DAA520?text=Navidad+Nuestra'">
+                        <div class="event-badge">Especial Coral</div>
                     </div>
-                    <div class="event-content">
-                        <h3 class="event-title">Navidad Nuestra</h3>
-                        <p class="event-description-brief">
+                    <div class="event-content-new">
+                        <h3 class="event-title-new">Navidad Nuestra</h3>
+                        <p class="event-description-new">
                             Una propuesta folclórica, mendocina y coral que rescata la identidad cultural de nuestra
                             provincia.
                         </p>
-                        <div class="event-meta">
-                            <div class="meta-item">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <div class="event-details-list">
+                            <div class="event-detail">
+                                <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
                                     <path
                                         d="M8 2V5M16 2V5M3.5 9.09H20.5M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z"
-                                        stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
-                                        stroke-linecap="round" stroke-linejoin="round" />
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                                 </svg>
-                                <span>13 y 14 de Diciembre</span>
+                                <span>13, 14 y 23 de Diciembre - 20:00hs</span>
                             </div>
-                            <div class="meta-item">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <div class="event-detail">
+                                <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
                                     <path
                                         d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
-                                        stroke="currentColor" stroke-width="1.5" />
+                                        stroke="currentColor" stroke-width="2" />
                                     <path
-                                        d="M12 22C16 18 20 14.4183 20 10C20 5.58172 16.4183 2 12 2C7.58172 2  4 5.58172 4 10C4 14.4183 8 18 12 22Z"
-                                        stroke="currentColor" stroke-width="1.5" />
+                                        d="M12 22C16 18 20 14.4183 20 10C20 5.58172 16.4183 2 12 2C7.58172 2 4 5.58172 4 10C4 14.4183 8 18 12 22Z"
+                                        stroke="currentColor" stroke-width="2" />
                                 </svg>
                                 <span>Iglesia de la Alameda</span>
                             </div>
                         </div>
-                        <button class="btn-expand" onclick="toggleEventDetails(this)">
-                            <span class="expand-text">Ver más detalles</span>
-                            <svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                        <div class="event-details" style="display: none;">
-                            <h4>Detalles del evento</h4>
-                            <p class="event-description-full">
-                                Una propuesta de Ariel Ramírez, folclórica, mendocina y coral que rescata la identidad
-                                cultural de nuestra provincia, combinando música, danza y poesía.
-                                <br>
-                                Nos acompaña: <br>
-                                <li>Coro "Amigos de Siempre"</li>
-                                <li>Coro "Alameda"</li>
-                                <li>Coro "Julián Aguirre"</li>
-                                <li>Coral "Santa María"</li>
-                                <li>Coro "Facultad de Ciencias Médicas"</li>
-                            </p>
-                            <h4>Horarios</h4>
-                            <ul class="event-schedule">
-                                <li>Sábado 13 de Diciembre - 20:00hs</li>
-                                <li>Domingo 14 de Diciembre - 20:00hs</li>
-                            </ul>
-                            <h4>Ubicación</h4>
-                            <p>Iglesia de la Alameda - San Martín 2038, Ciudad, Mendoza</p>
-                            <h4>Entrada</h4>
-                            <p>Libre y gratuita. Cupos limitados - se recomienda llegar con anticipación.</p>
+                        <button class="btn btn-outline-event" onclick="toggleEventExpand(this)">Ver detalles</button>
+                        <div class="event-expanded" style="display: none;">
+                            <p>Disfruta de la música y tradiciones que nos representan en una celebración única. Un
+                                evento especial que une a la comunidad mendocina a través del canto coral y expresiones
+                                folklóricas auténticas.</p>
+                            <p><strong>Entrada:</strong> Libre y gratuita. Cupos limitados.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Event Card 2 - Deseo de Navidad (EVENTO CENTRAL) -->
-                <div class="event-card event-featured">
-                    <div class="event-image">
-                        <img src="evento-deseo-navidad.jpg" alt="Deseo de Navidad">
-                        <div class="event-category">Teatro Musical</div>
+                <!-- Event Card 2 - Deseo de Navidad -->
+                <div class="event-card-new event-featured fade-in-scroll" data-delay="200">
+                    <div class="featured-ribbon">Evento Central</div>
+                    <div class="event-image-new">
+                        <img src="evento-deseo-navidad.jpg" alt="Deseo de Navidad"
+                            onerror="this.src='https://via.placeholder.com/600x400/DAA520/8B0000?text=Deseo+de+Navidad'">
+                        <div class="event-badge">Teatro Musical</div>
                     </div>
-                    <div class="event-content">
-                        <h3 class="event-title">Deseo de Navidad</h3>
-                        <p class="event-description-brief">
-                            Un gran especial navideño que reúne teatro, música, danza e imagen una noche única, llena de
-                            inspiración, fe y encuentro.
+                    <div class="event-content-new">
+                        <h3 class="event-title-new">Deseo de Navidad</h3>
+                        <p class="event-description-new">
+                            Especial navideño con alto nivel de producción. Una propuesta que combina teatro, música y
+                            danza.
                         </p>
-                        <div class="event-meta">
-                            <div class="meta-item">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <div class="event-details-list">
+                            <div class="event-detail">
+                                <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
                                     <path
                                         d="M8 2V5M16 2V5M3.5 9.09H20.5M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z"
-                                        stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
-                                        stroke-linecap="round" stroke-linejoin="round" />
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                                 </svg>
-                                <span>20 y 21 de Diciembre</span>
+                                <span>20 y 21 de Diciembre - 20:30hs</span>
                             </div>
-                            <div class="meta-item">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <div class="event-detail">
+                                <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
                                     <path
                                         d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
-                                        stroke="currentColor" stroke-width="1.5" />
+                                        stroke="currentColor" stroke-width="2" />
                                     <path
                                         d="M12 22C16 18 20 14.4183 20 10C20 5.58172 16.4183 2 12 2C7.58172 2 4 5.58172 4 10C4 14.4183 8 18 12 22Z"
-                                        stroke="currentColor" stroke-width="1.5" />
+                                        stroke="currentColor" stroke-width="2" />
                                 </svg>
                                 <span>Iglesia de la Alameda</span>
                             </div>
                         </div>
-                        <button class="btn-expand" onclick="toggleEventDetails(this)">
-                            <span class="expand-text">Ver más detalles</span>
-                            <svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                        <div class="event-details" style="display: none;">
-                            <h4>Detalles del evento</h4>
-                            <p class="event-description-full">
-                                En la víspera de Navidad, Dylan está emocionado por haber terminado su lista de deseos
-                                navideños. Pero su familia, no le presta atención. Dylan se siente frustrado, enojado,
-                                se aísla deseando vivir en otra época mejor. Un personaje especial aparece para ayudar a
-                                Dylan a redescubrir la verdadera esencia de la Navidad, a través de un extraño viaje en
-                                el tiempo.
-                                A lo largo del viaje, aprenderá que la esencia de la Navidad no depende del tiempo, sino
-                                de dar, esparcir alegría y valorar a la familia. Dylan se da cuenta de que ama a su
-                                familia y quiere hacer que la Navidad sea significativa de nuevo.
-                                Al regresar a su tiempo, todo ha cambiado y juntos se preparan para recordar el
-                                nacimiento de Jesús.
-                            </p>
-                            <h4>Horarios</h4>
-                            <ul class="event-schedule">
-                                <li>Sábado 20 de Diciembre - 20:00hs</li>
-                                <li>Domingo 21 de Diciembre - 20:00hs</li>
-                            </ul>
-                            <h4>Ubicación</h4>
-                            <p>Iglesia de la Alameda - San Martín 2038, Ciudad, Mendoza</p>
-                            <h4>Entrada</h4>
-                            <p>Libre y gratuita.</p>
+                        <button class="btn btn-outline-event" onclick="toggleEventExpand(this)">Ver detalles</button>
+                        <div class="event-expanded" style="display: none;">
+                            <p>Una noche especial con el mensaje central del evangelio. Más de 50 artistas en escena,
+                                puesta técnica de primer nivel y una historia que tocará tu corazón. Ideal para
+                                disfrutar en familia.</p>
+                            <p><strong>Entrada:</strong> Libre y gratuita.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Event Card 3 - Casas Abiertas -->
-                <div class="event-card">
-                    <div class="event-image">
-                        <img src="img/una-navidad-en-casas-abiertas.webp" alt="Casas Abiertas">
-                        <div class="event-category">Acción Social</div>
+                <div class="event-card-new fade-in-scroll" data-delay="300">
+                    <div class="event-image-new">
+                        <img src="evento-casas-abiertas.jpg" alt="Casas Abiertas"
+                            onerror="this.src='https://via.placeholder.com/600x400/8B0000/DAA520?text=Casas+Abiertas'">
+                        <div class="event-badge">Acción Social</div>
                     </div>
-                    <div class="event-content">
-                        <h3 class="event-title">Una Navidad de Casas Abiertas</h3>
-                        <p class="event-description-brief">
+                    <div class="event-content-new">
+                        <h3 class="event-title-new">Una Navidad de Casas Abiertas</h3>
+                        <p class="event-description-new">
                             Familias de la Alameda abren sus hogares y su mesa para acompañar a niños y adolescentes.
                         </p>
-                        <div class="event-meta">
-                            <div class="meta-item">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <div class="event-details-list">
+                            <div class="event-detail">
+                                <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
                                     <path
                                         d="M8 2V5M16 2V5M3.5 9.09H20.5M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z"
-                                        stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
-                                        stroke-linecap="round" stroke-linejoin="round" />
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                                 </svg>
                                 <span>Navidad 2025</span>
                             </div>
-                            <div class="meta-item">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <div class="event-detail">
+                                <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
                                     <path
                                         d="M20.84 4.61C20.3292 4.099 19.7228 3.69364 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69364 13.5708 4.099 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.57831 8.50903 2.99871 7.05 2.99871C5.59096 2.99871 4.19169 3.57831 3.16 4.61C2.1283 5.64169 1.54871 7.04097 1.54871 8.5C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7564 11.2728 22.0329 10.6053C22.3095 9.93789 22.4518 9.22248 22.4518 8.5C22.4518 7.77752 22.3095 7.06211 22.0329 6.39467C21.7564 5.72723 21.351 5.12087 20.84 4.61Z"
-                                        stroke="currentColor" stroke-width="1.5" />
+                                        stroke="currentColor" stroke-width="2" />
                                 </svg>
                                 <span>Acción Social</span>
                             </div>
                         </div>
-                        <button class="btn-expand" onclick="toggleEventDetails(this)">
-                            <span class="expand-text">Ver más detalles</span>
-                            <svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                        <div class="event-details" style="display: none;">
-                            <h4>Detalles del evento</h4>
-                            <p class="event-description-full">
-                                Programa en conjunto con "Yo Creo". Familias de la comunidad abren sus puertas
-                                para compartir la cena de Nochebuena con niños y adolescentes que viven en hogares
-                                de Mendoza, brindándoles un espacio de contención y amor familiar.
-                            </p>
-                            <h4>Cómo participar</h4>
-                            <p>Si deseas postularte como familia anfitriona o colaborar, contáctanos para más
-                                información.</p>
+                        <button class="btn btn-outline-event" onclick="toggleEventExpand(this)">Ver detalles</button>
+                        <div class="event-expanded" style="display: none;">
+                            <p>Programa en conjunto con "Yo Creo". Familias de la comunidad abren sus puertas para
+                                compartir la cena de Nochebuena con niños y adolescentes que viven en hogares de
+                                Mendoza.</p>
+                            <p><strong>Cómo participar:</strong> Contáctanos para más información.</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section fade-in-scroll" id="video">
+        <div class="container">
+            <div class="section-header-center">
+                <h2 class="section-title-large">Revive la Experiencia</h2>
+                <p class="section-subtitle">Mira lo que vivimos juntos en Navidad</p>
+            </div>
+
+            <div class="video-container-wrapper">
+                <div class="video-frame">
+                    <iframe src="https://www.youtube.com/embed/_5DDAqsZWkA?start=5425" title="Navidad en Mendoza"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section fade-in-scroll" id="galeria">
+        <div class="container">
+            <div class="section-header-center">
+                <h2 class="section-title-large">Galería de Momentos</h2>
+                <p class="section-subtitle">Recuerdos que iluminan nuestro corazón</p>
+            </div>
+
+            <div class="gallery-slider">
+                <div class="slider-track" id="sliderTrack">
+                    <!-- Placeholder images - replace with actual photos -->
+                    <div class="slide">
+                        <img src="gallery/1.jpg" alt="Momento 1"
+                            onerror="this.src='https://via.placeholder.com/1200x800/8B0000/DAA520?text=Galeria+1'">
+                    </div>
+                    <div class="slide">
+                        <img src="gallery/2.jpg" alt="Momento 2"
+                            onerror="this.src='https://via.placeholder.com/1200x800/DAA520/8B0000?text=Galeria+2'">
+                    </div>
+                    <div class="slide">
+                        <img src="gallery/3.jpg" alt="Momento 3"
+                            onerror="this.src='https://via.placeholder.com/1200x800/8B0000/DAA520?text=Galeria+3'">
+                    </div>
+                    <div class="slide">
+                        <img src="gallery/4.jpg" alt="Momento 4"
+                            onerror="this.src='https://via.placeholder.com/1200x800/DAA520/8B0000?text=Galeria+4'">
+                    </div>
+                    <div class="slide">
+                        <img src="gallery/5.jpg" alt="Momento 5"
+                            onerror="this.src='https://via.placeholder.com/1200x800/8B0000/DAA520?text=Galeria+5'">
+                    </div>
+                </div>
+
+                <button class="slider-nav prev" onclick="moveSlide(-1)" aria-label="Anterior">‹</button>
+                <button class="slider-nav next" onclick="moveSlide(1)" aria-label="Siguiente">›</button>
+
+                <div class="slider-dots" id="sliderDots"></div>
             </div>
         </div>
     </section>
 
     <!-- Bolsas Navideñas Section -->
-    <section class="bolsas-section" id="bolsas">
+    <section class="bolsas-section fade-in-scroll" id="bolsas">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Campaña Solidaria</span>
-                <h2 class="section-title">Regalo de Amor
-                    <p class="section-description">
-                        Porque creemos en una familia extraordinaria, nos unimos para que ninguna mesa quede sin alegría
-                        esta Navidad.
-                        Vos podés ser parte. Todo suma. Todo ilumina. Todo transforma. En esta Navidad, podés llenar una
-                        mesa y abrazar un corazón.
-                    </p>
+            <div class="section-header-center">
+                <h2 class="section-title-large">Bolsas Navideñas</h2>
+                <p class="section-subtitle">Porque creemos en una familia extraordinaria</p>
             </div>
 
-            <div class="bolsas-info">
-                <h3>¿Qué incluye una Bolsa Navideña?</h3>
-                <div class="items-grid">
-                    <div class="item">✓ Pan dulce</div>
-                    <div class="item">✓ Budín</div>
-                    <div class="item">✓ Garrapiñada</div>
-                    <div class="item">✓ Turrón de maní</div>
-                    <div class="item">✓ Duraznos al natural</div>
-                    <div class="item">✓ Agua saborizada</div>
-                    <div class="item">✓ Gaseosa</div>
-                    <div class="item">✓ Mantecol</div>
-                    <div class="item item-special">Sumá una carta dedicada</div>
-                </div>
-                <br>
-                <p class="bolsas-destination">
-                <h3>¿A dónde van destinadas?</h3>
-                Las bolsas navideñas serán distribuidas a través de los diferentes proyectos sociales que la
-                Fundación Cristiana Alameda realiza en Mendoza, llegando a familias que más lo necesitan en nuestra
-                comunidad.
-                </p>
-            </div>
-
-            <div class="vouchers-section">
-                <h3>Colaborá a la distancia</h3>
-                <p>Si no podés ir a hacer las compras, podés donar un voucher. Tu aporte suma amor a cada bolsita
-                    navideña.</p>
-                <div class="vouchers-grid">
-
-                    <div class="voucher-card featured">
-                        <div class="voucher-icon">✨</div>
-                        <h4>Voucher "Regalo de Amor"</h4>
-                        <p class="voucher-amount">$20.000</p>
-                        <p class="voucher-desc">Un impulso que acerca una mesa llena 1 bolsa</p>
+            <div class="bolsas-content">
+                <div class="bolsas-info-card">
+                    <h3>¿Qué incluye una Bolsa Navideña?</h3>
+                    <div class="items-grid-simple">
+                        <div class="item-simple">✓ Pan dulce</div>
+                        <div class="item-simple">✓ Budín</div>
+                        <div class="item-simple">✓ Garrapiñada</div>
+                        <div class="item-simple">✓ Turrón de maní</div>
+                        <div class="item-simple">✓ Duraznos al natural</div>
+                        <div class="item-simple">✓ Agua saborizada</div>
+                        <div class="item-simple special">✉️ Sumá una carta dedicada</div>
+                    </div>
+                    <div class="bolsas-message">
+                        <strong>¿A dónde van destinadas?</strong>
+                        <p>Las bolsas navideñas serán distribuidas a través de los diferentes proyectos sociales que la
+                            Fundación Cristiana Alameda realiza en Mendoza, llegando a familias que más lo necesitan en
+                            nuestra comunidad.</p>
                     </div>
                 </div>
 
-                <p class="vouchers-message">
-                    Somos una familia extraordinaria, y cuando damos unidos, la alegría se multiplica.
-                    Hacelo desde donde estés. Con lo que puedas. Cada aporte ilumina Mendoza con la luz de Jesús.
-                </p>
-            </div>
-        </div>
-    </section>
+                <div class="vouchers-card">
+                    <h3>Colaborá con Vouchers</h3>
+                    <p>Si no podés ir a hacer las compras, podés donar un voucher. Tu aporte suma amor a cada bolsita
+                        navideña.</p>
+                    <p class="alias-info">💳 Alias: <strong>recursos.alameda</strong></p>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-card">
-                <div class="cta-content">
-                    <h2 class="cta-title">¿Listo para Celebrar con Nosotros?</h2>
-                    <p class="cta-description">
-                        No te pierdas ninguna de nuestras actividades navideñas. Contáctanos para obtener más
-                        información sobre horarios, ubicaciones y cómo participar.
-                    </p>
-                    <a href="#contacto" class="btn btn-primary">
-                        <span>Contáctanos Ahora</span>
-                        <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </a>
-                </div>
-                <div class="cta-decoration">
-                    <div class="decoration-circle"></div>
-                    <div class="decoration-circle"></div>
-                    <div class="decoration-circle"></div>
+                    <div class="vouchers-grid-simple">
+                        <div class="voucher-simple">
+                            <div class="voucher-icon">❤️</div>
+                            <h4>Voucher Corazón</h4>
+                            <p class="amount">$5.000</p>
+                            <p class="desc">Un pequeño acto que enciende esperanza</p>
+                        </div>
+                        <div class="voucher-simple featured">
+                            <div class="voucher-icon">✨</div>
+                            <h4>Voucher Esperanza</h4>
+                            <p class="amount">$10.000</p>
+                            <p class="desc">Un impulso que acerca una mesa llena</p>
+                        </div>
+                        <div class="voucher-simple">
+                            <div class="voucher-icon">💫</div>
+                            <h4>Voucher Luz</h4>
+                            <p class="amount">$20.000</p>
+                            <p class="desc">Una bolsita completa que transforma</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contacto">
+    <section class="contact-section fade-in-scroll" id="contacto">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Contáctanos</span>
-                <h2 class="section-title">Estamos para ayudarte/h2>
-                    <p class="section-description">
-                        ¿Tenés preguntas? Estamos encantados de ayudarte. Contáctanos por cualquiera de estos medios.
-                    </p>
+            <div class="section-header-center">
+                <h2 class="section-title-large">Estamos Aquí Para Ti</h2>
+                <p class="section-subtitle">¿Tienes preguntas? Contáctanos</p>
             </div>
 
-            <div class="contact-grid">
-                <div class="contact-card">
+            <div class="contact-grid-simple">
+                <div class="contact-card-simple">
                     <div class="contact-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
                             <path
                                 d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                             <path
                                 d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                         </svg>
                     </div>
-                    <h3 class="contact-title">Dirección</h3>
-                    <p class="contact-info">Iglesia de la Alameda<br>San Martin 2038<br>Ciudad, Mendoza, Argentina</p>
+                    <h3>Dirección</h3>
+                    <p>Iglesia de la Alameda<br>San Martín 2038<br>Ciudad, Mendoza, Argentina</p>
                 </div>
 
-                <div class="contact-card">
+                <div class="contact-card-simple">
                     <div class="contact-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
                             <path
                                 d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7294C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.095 3.90347 2.12787 3.62476 2.21649 3.36162C2.30512 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.0498 2.28271 3.30379 2.17052C3.55777 2.05833 3.83233 2.00026 4.10999 2H7.10999C7.5953 1.99522 8.06579 2.16708 8.43376 2.48353C8.80173 2.79999 9.04207 3.23945 9.10999 3.72C9.23662 4.68007 9.47144 5.62273 9.80999 6.53C9.94454 6.88792 9.97366 7.27691 9.8939 7.65088C9.81415 8.02485 9.62886 8.36811 9.35999 8.64L8.08999 9.91C9.51355 12.4135 11.5864 14.4864 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9751 14.1858 16.3491 14.1061C16.7231 14.0263 17.1121 14.0555 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                         </svg>
                     </div>
-                    <h3 class="contact-title">Teléfono</h3>
-                    <p class="contact-info">+549 261 517 8081<br>Lun - Vie: 9:00 AM - 1:00 PM</p>
+                    <h3>Teléfono</h3>
+                    <p>+549 261 517 8081<br>Lun - Vie: 9:00 AM - 6:00 PM</p>
                 </div>
 
-                <div class="contact-card">
+                <div class="contact-card-simple">
                     <div class="contact-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
                             <path
                                 d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                         </svg>
                     </div>
-                    <h3 class="contact-title">Email</h3>
-                    <p class="contact-info">contacto@alameda.ar</p>
+                    <h3>Email</h3>
+                    <p>contacto@alameda.ar</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer-new">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>Iglesia de la Alameda</h3>
-                    <p>Un reencuentro de esperanza</p>
+            <div class="footer-content-new">
+                <div class="footer-logo-section">
+                    <img src="logo-textured.png" alt="Navidad en Mendoza" class="footer-logo">
+                    <p class="footer-tagline">Un reencuentro de esperanza</p>
                 </div>
+
                 <div class="footer-social">
                     <a href="#" class="social-link" aria-label="Facebook">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                             <path
                                 d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                         </svg>
                     </a>
                     <a href="#" class="social-link" aria-label="Instagram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                             <path
                                 d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                         </svg>
                     </a>
                     <a href="#" class="social-link" aria-label="YouTube">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                             <path
                                 d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                         </svg>
                     </a>
                 </div>
             </div>
+
             <div class="footer-bottom">
                 <p>&copy; 2025 Iglesia de la Alameda - Navidad en Mendoza. Todos los derechos reservados.</p>
             </div>
@@ -444,14 +436,14 @@
 
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/5492615178081" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
-        aria-label="Contactar por WhatsApp" title="¿Tienes preguntas? Escríbenos">
-        <span class="whatsapp-tooltip">¿Tienes preguntas? Escríbenos</span>
+        aria-label="Contactar por WhatsApp">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
         </svg>
     </a>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 
