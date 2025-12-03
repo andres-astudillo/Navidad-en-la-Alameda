@@ -1019,3 +1019,45 @@ body::before {
 .visible {
     display: block;
 }
+.hero-logo {
+    max-width: clamp(300px, 60vw, 700px);
+    width: 100%;
+    height: auto;
+    margin-bottom: var(--spacing-md);
+    filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.7)) drop-shadow(0 2px 40px rgba(212, 175, 55, 0.5));
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer-logo-img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity var(--transition-normal);
+}
+
+.footer-logo-img:hover {
+    opacity: 1;
+}
+
+.nav-logo-img {
+    height: 40px;
+    width: auto;
+    transition: all var(--transition-normal);
+}
+
+.nav-logo-img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
