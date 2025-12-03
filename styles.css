@@ -5,7 +5,7 @@
 :root {
     /* Color Palette - Deep Burgundy & Warm Gold (from hero image) */
     --color-burgundy-darkest: #4A1414;
-    --color-burgundy-dark: var(--color-off-white);
+    --color-burgundy-dark: #5C0A0A;
     --color-burgundy: #6B1E1E;
     --color-burgundy-medium: #7D2020;
     --color-burgundy-light: #8B2323;
@@ -97,31 +97,31 @@ body::before {
     background-size: 200% 200%;
     background-position: 0% 0%;
     animation: sparkle 20s ease-in-out infinite;
-    opacity: 0.4;
+    opacity: 0.6;
     pointer-events: none;
-    z-index: 0;
+    z-index: 1;
 }
 
 @keyframes sparkle {
 
     0%,
     100% {
-        opacity: 0.3;
+        opacity: 0.5;
         background-position: 0% 0%;
     }
 
     25% {
-        opacity: 0.5;
+        opacity: 0.7;
         background-position: 100% 0%;
     }
 
     50% {
-        opacity: 0.4;
+        opacity: 0.6;
         background-position: 100% 100%;
     }
 
     75% {
-        opacity: 0.5;
+        opacity: 0.7;
         background-position: 0% 100%;
     }
 }
@@ -232,7 +232,7 @@ body::before {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: url('hero-background.jpg') center center / cover no-repeat;
+    background: url('img/BG_LANDING_HERO.webp') center center / cover no-repeat;
     background-color: var(--color-burgundy);
 }
 
