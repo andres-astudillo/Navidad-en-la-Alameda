@@ -272,6 +272,9 @@ a { color: inherit; }
 .card-container { max-width: var(--content-width); margin-inline: auto; }
 .welcome { background: var(--deep); }
 .welcome-card { max-width: 49rem; text-align: center; }
+.welcome-verse { max-width: 39rem; margin: 1.65rem auto 0; }
+.welcome-verse blockquote { margin: 0; font: 600 clamp(1.25rem, 2.8vw, 1.65rem)/1.3 var(--heading-font); }
+.welcome-verse figcaption { margin-top: .4rem; color: var(--gold-light); font-size: .875rem; }
 .welcome-card::before {
     content: "";
     display: block;
@@ -288,40 +291,48 @@ a { color: inherit; }
 }
 .card-description, .card-subtitle { margin-top: .9rem; color: var(--muted); }
 .card-description { font-size: 1.06rem; }
-.events-grid, .contact-grid {
+.contact-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: clamp(1rem, 2vw, 1.6rem);
     margin-top: 2rem;
 }
-.event-card {
-    display: flex;
-    min-width: 0;
-    flex-direction: column;
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: .45rem;
-    overflow: hidden;
+.agenda {
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid var(--line);
 }
-.event-image { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--deep); }
-.event-image img { width: 100%; height: 100%; object-fit: cover; }
-.event-badge {
-    position: absolute;
-    inset: auto auto .75rem .75rem;
-    max-width: calc(100% - 1.5rem);
-    border-radius: .15rem;
-    padding: .25rem .55rem;
-    background: var(--deep);
+.agenda li {
+    display: grid;
+    grid-template-columns: minmax(11rem, 1fr) 3fr;
+    gap: .4rem 1.5rem;
+    padding: 1.25rem clamp(.8rem, 3vw, 2rem);
+    border-top: 1px solid var(--line);
+}
+.agenda-date {
     color: var(--gold-light);
-    font-size: .8125rem;
+    font-size: .94rem;
     font-weight: 700;
 }
-.event-content { display: flex; flex: 1; flex-direction: column; padding: 1.3rem; }
+.agenda .agenda-featured { background: var(--panel); }
+.agenda h3 a { text-decoration-color: var(--gold); text-underline-offset: .15em; }
+.agenda-time { margin-top: .4rem; font-weight: 600; }
+.agenda-detail { color: var(--muted); }
 .event-title, .subsection-title, .contact-card h3 { font-size: 2rem; line-height: 1.05; }
-.event-description { color: var(--muted); margin: .65rem 0 1.2rem; }
-.event-meta { display: grid; gap: .35rem; margin-top: auto; padding-top: .75rem; border-top: 1px solid var(--line); }
-.meta-item { display: flex; align-items: center; gap: .5rem; font-size: .9rem; font-weight: 500; }
-.meta-item .icon { flex: none; color: var(--gold-light); }
+.special { background: var(--panel); }
+.special-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(1.5rem, 5vw, 4rem);
+}
+.special .card-title { margin-top: .6rem; }
+.special-schedule { margin-top: .9rem; color: var(--gold-light); font-weight: 700; }
+.special-registration { margin-top: 1.4rem; }
+.special-media { margin: 0; }
+.special-media img { width: 100%; height: auto; border-radius: .45rem; }
+.special-media figcaption { margin-top: .5rem; color: var(--muted); font-size: .875rem; }
 
 /* Video and gallery */
 #video { background: var(--deep); }
@@ -392,19 +403,22 @@ a { color: inherit; }
 /* Solidarity and contact */
 .solidarity { color-scheme: light; background: var(--paper); color: var(--ink); }
 .solidarity .card-subtitle { color: #40546a; }
-.bolsas-content { margin-top: 1.75rem; }
-.bolsas-main-card {
+.solidarity-layout {
     display: grid;
     grid-template-columns: 1.25fr 1fr;
     gap: 1.35rem clamp(1.25rem, 4vw, 3.5rem);
     align-items: start;
+    margin-top: 1.75rem;
 }
-.bolsas-main-card .subsection-title { grid-column: 1 / -1; }
+.solidarity-layout p + .subsection-title { margin-top: 1.15rem; }
+.solidarity-layout .subsection-title + p { margin-top: .45rem; }
 .items-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: .55rem;
-    grid-row: span 2;
+    list-style: none;
+    margin: .8rem 0 0;
+    padding: 0;
 }
 .item {
     padding: .65rem .8rem;
@@ -418,11 +432,6 @@ a { color: inherit; }
     border-color: #ceb285;
     font-weight: 700;
 }
-.bolsas-destination p + p { margin-top: .4rem; }
-.regalo-amor-section { padding-top: 1.1rem; border-top: 1px solid #cdbda4; }
-.regalo-text { margin-bottom: .85rem; }
-.btn-regalo-amor { color: var(--ivory); background: var(--ink); }
-.btn-regalo-amor:hover { background: var(--blue); }
 .solidarity :focus-visible { outline-color: var(--blue); }
 .contact-card { border-top: 1px solid var(--line); padding-top: 1.25rem; }
 .contact-icon { color: var(--gold); margin-bottom: .6rem; }
@@ -507,8 +516,7 @@ a { color: inherit; }
     .hero-logo { width: min(22rem, 91%); }
     .hero-title { font-size: clamp(3.8rem, 13vw, 5.4rem); }
     .hero-edition { font-size: .8125rem; letter-spacing: .085em; }
-    .events-grid, .contact-grid, .bolsas-main-card { grid-template-columns: 1fr; }
-    .items-grid { grid-row: auto; }
+    .agenda li, .contact-grid, .solidarity-layout, .special-layout { grid-template-columns: 1fr; }
     .contact-grid { gap: 1.35rem; }
     .contact-card { padding-right: 1.75rem; }
     .slide { aspect-ratio: 4 / 3; }
