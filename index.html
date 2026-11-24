@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -6,44 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Navidad en Mendoza 2025 - Un reencuentro de esperanza. Celebramos la Navidad en familia, comunidad y con fe.">
-    <meta property="og:title" content="Navidad en Mendoza 2025 - Un reencuentro de esperanza">
-    <meta property="og:description"
-        content="La Iglesia de la Alameda te invita a vivir una Navidad extraordinaria con eventos culturales, artÃ­sticos y solidarios.">
-    <meta property="og:type" content="website">
+    <title>Navidad en Mendoza 2025 - Un reencuentro de esperanza</title>
     <link rel="icon" type="image/png" href="img/favicon.png">
-    <title>Navidad en Mendoza 2025 - Un reencuentro de esperanza</title>
-
-    <!-- HTML Meta Tags -->
-    <title>Navidad en Mendoza 2025 - Un reencuentro de esperanza</title>
-    <meta name="description"
-        content="La Iglesia de la Alameda te invita a vivir una Navidad extraordinaria con eventos culturales, artisticos y solidarios.">
-
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://navidadenmendoza.com/">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://navidadenmendoza.com/">
     <meta property="og:title" content="Navidad en Mendoza 2025 - Un reencuentro de esperanza">
     <meta property="og:description"
-        content="La Iglesia de la Alameda te invita a vivir una Navidad extraordinaria con eventos culturales, artisticos y solidarios.">
-    <meta property="og:image" content="YOUR_IMAGE_URL_HERE">
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="navidadenmendoza.com">
-    <meta property="twitter:url" content="https://navidadenmendoza.com/">
-    <meta name="twitter:title" content="Navidad en Mendoza 2025 - Un reencuentro de esperanza">
-    <meta name="twitter:description"
-        content="La Iglesia de la Alameda te invita a vivir una Navidad extraordinaria con eventos culturales, artisticos y solidarios.">
-    <meta name="twitter:image" content="YOUR_IMAGE_URL_HERE">
-
-    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
-
-    <!-- NOTE: You selected a new image. Please upload it to your server and replace "YOUR_IMAGE_URL_HERE" with the actual URL. -->
+        content="La Iglesia de la Alameda te invita a vivir una Navidad extraordinaria con eventos culturales, artísticos y solidarios.">
+    <meta name="twitter:card" content="summary">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Styles -->
@@ -52,14 +28,15 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <a class="skip-link" href="#inicio">Saltar al contenido</a>
+    <nav class="navbar" id="navbar" aria-label="Navegación principal">
         <div class="nav-container">
             <div class="logo-container">
                 <a href="https://alameda.ar" target="_blank" rel="noopener noreferrer">
-                    <img src="img/Logo Alameda Blanco.png" alt="Navidad en Mendoza" class="nav-logo-img">
+                    <img src="img/Logo Alameda Blanco.png" alt="Iglesia de la Alameda" class="nav-logo-img">
                 </a>
             </div>
-            <button class="hamburger" id="hamburger" aria-label="Menu">
+            <button type="button" class="hamburger" id="hamburger" aria-label="Menú" aria-controls="navMenu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -75,22 +52,24 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="inicio">
-        <div class="hero-content">
-            <img src="img/logo-navidad-mendoza.png" alt="Navidad en Mendoza 2025" class="hero-logo">
-            <p class="hero-subtitle">Un reencuentro de esperanza</p>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
-        </div>
-    </section>
+    <main id="inicio" tabindex="-1">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <div class="hero-copy">
+                    <p class="hero-edition">Iglesia de la Alameda · 2025</p>
+                    <h1 class="hero-title" id="hero-title">Navidad <span>en Mendoza</span></h1>
+                    <p class="hero-subtitle">Un reencuentro de esperanza</p>
+                    <a class="btn" href="#eventos">Ver eventos</a>
+                </div>
+                <img src="img/pesebre-dorado.png" alt="Pesebre dorado con la estrella de Navidad"
+                    class="hero-logo" width="1081" height="1080" fetchpriority="high">
+            </div>
+        </section>
 
-    <!-- Main Content Wrapper -->
-    <div class="content-wrapper">
+        <div class="content-wrapper">
 
         <!-- Welcome Card -->
-        <section class="card-section">
+        <section class="card-section welcome">
             <div class="card-container welcome-card">
                 <div class="card-header-center">
                     <h2 class="card-title">Bienvenidos a Navidad en Mendoza</h2>
@@ -116,8 +95,7 @@
                     <!-- Event Card 1 -->
                     <div class="event-card">
                         <div class="event-image">
-                            <img src="img/Navidad-nuestro.webp" alt="Navidad Nuestra"
-                                onerror="this.src='https://via.placeholder.com/600x400/5C0A0A/D4AF37?text=Navidad+Nuestra'">
+                            <img src="img/Navidad-nuestro.webp" alt="Navidad Nuestra" loading="lazy">
                             <div class="event-badge">Especial Coral</div>
                         </div>
                         <div class="event-content">
@@ -153,8 +131,7 @@
                     <!-- Event Card 2 -->
                     <div class="event-card">
                         <div class="event-image">
-                            <img src="img/Deseo-de-navidad.webp" alt="Deseo de Navidad"
-                                onerror="this.src='https://via.placeholder.com/600x400/D4AF37/5C0A0A?text=Deseo+de+Navidad'">
+                            <img src="img/Deseo-de-navidad.webp" alt="Deseo de Navidad" loading="lazy">
                             <div class="event-badge">Evento Principal</div>
                         </div>
                         <div class="event-content">
@@ -190,8 +167,7 @@
                     <!-- Event Card 3 -->
                     <div class="event-card">
                         <div class="event-image">
-                            <img src="img/Una-navidad.webp" alt="Casas Abiertas"
-                                onerror="this.src='https://via.placeholder.com/600x400/5C0A0A/D4AF37?text=Casas+Abiertas'">
+                            <img src="img/Una-navidad.webp" alt="Casas Abiertas" loading="lazy">
                             <div class="event-badge">Acción Social</div>
                         </div>
                         <div class="event-content">
@@ -233,7 +209,7 @@
                 </div>
 
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/_5DDAqsZWkA?start=5425" title="Navidad en Mendoza"
+                    <iframe src="https://www.youtube.com/embed/_5DDAqsZWkA?start=5425" title="Navidad en Mendoza" loading="lazy"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen>
@@ -253,90 +229,75 @@
                 <div class="gallery-slider">
                     <div class="slider-track" id="sliderTrack">
                         <div class="slide">
-                            <img src="gallery/Gallery (1).webp" alt="Momento 1"
-                                onerror="this.src='https://via.placeholder.com/1200x800/5C0A0A/D4AF37?text=Galeria+1'">
+                            <img src="gallery/Gallery (1).webp" alt="Momento 1" loading="lazy">
                         </div>
                         <div class="slide">
-                            <img src="gallery/Gallery (2).webp" alt="Momento 2"
-                                onerror="this.src='https://via.placeholder.com/1200x800/D4AF37/5C0A0A?text=Galeria+2'">
+                            <img src="gallery/Gallery (2).webp" alt="Momento 2" loading="lazy">
                         </div>
                         <div class="slide">
-                            <img src="gallery/Gallery (3).webp" alt="Momento 3"
-                                onerror="this.src='https://via.placeholder.com/1200x800/5C0A0A/D4AF37?text=Galeria+3'">
+                            <img src="gallery/Gallery (3).webp" alt="Momento 3" loading="lazy">
                         </div>
                         <div class="slide">
-                            <img src="gallery/Gallery (4).webp" alt="Momento 4"
-                                onerror="this.src='https://via.placeholder.com/1200x800/D4AF37/5C0A0A?text=Galeria+4'">
+                            <img src="gallery/Gallery (4).webp" alt="Momento 4" loading="lazy">
                         </div>
                         <div class="slide">
-                            <img src="gallery/Gallery (5).webp" alt="Momento 5"
-                                onerror="this.src='https://via.placeholder.com/1200x800/5C0A0A/D4AF37?text=Galeria+5'">
+                            <img src="gallery/Gallery (5).webp" alt="Momento 5" loading="lazy">
                         </div>
                         <div class="slide">
-                            <img src="gallery/Gallery (6).webp" alt="Momento 5"
-                                onerror="this.src='https://via.placeholder.com/1200x800/5C0A0A/D4AF37?text=Galeria+5'">
+                            <img src="gallery/Gallery (6).webp" alt="Momento 6" loading="lazy">
                         </div>
                         <div class="slide">
-                            <img src="gallery/Gallery (7).webp" alt="Momento 5"
-                                onerror="this.src='https://via.placeholder.com/1200x800/5C0A0A/D4AF37?text=Galeria+5'">
+                            <img src="gallery/Gallery (7).webp" alt="Momento 7" loading="lazy">
                         </div>
                         <div class="slide">
-                            <img src="gallery/Gallery (8).webp" alt="Momento 5"
-                                onerror="this.src='https://via.placeholder.com/1200x800/5C0A0A/D4AF37?text=Galeria+5'">
+                            <img src="gallery/Gallery (8).webp" alt="Momento 8" loading="lazy">
                         </div>
                         <div class="slide">
-                            <img src="gallery/Gallery (9).webp" alt="Momento 5"
-                                onerror="this.src='https://via.placeholder.com/1200x800/5C0A0A/D4AF37?text=Galeria+5'">
+                            <img src="gallery/Gallery (9).webp" alt="Momento 9" loading="lazy">
                         </div>
                         <div class="slide">
-                            <img src="gallery/Gallery (10).webp" alt="Momento 5"
-                                onerror="this.src='https://via.placeholder.com/1200x800/5C0A0A/D4AF37?text=Galeria+5'">
+                            <img src="gallery/Gallery (10).webp" alt="Momento 10" loading="lazy">
                         </div>
                         <div class="slide">
-                            <img src="gallery/Gallery (11).webp" alt="Momento 5"
-                                onerror="this.src='https://via.placeholder.com/1200x800/5C0A0A/D4AF37?text=Galeria+5'">
+                            <img src="gallery/Gallery (11).webp" alt="Momento 11" loading="lazy">
                         </div>
                         <div class="slide">
-                            <img src="gallery/Gallery (12).webp" alt="Momento 5"
-                                onerror="this.src='https://via.placeholder.com/1200x800/5C0A0A/D4AF37?text=Galeria+5'">
+                            <img src="gallery/Gallery (12).webp" alt="Momento 12" loading="lazy">
                         </div>
                         <div class="slide">
-                            <img src="gallery/Gallery (13).webp" alt="Momento 5"
-                                onerror="this.src='https://via.placeholder.com/1200x800/5C0A0A/D4AF37?text=Galeria+5'">
+                            <img src="gallery/Gallery (13).webp" alt="Momento 13" loading="lazy">
                         </div>
                         <div class="slide">
-                            <img src="gallery/Gallery (14).webp" alt="Momento 5"
-                                onerror="this.src='https://via.placeholder.com/1200x800/5C0A0A/D4AF37?text=Galeria+5'">
+                            <img src="gallery/Gallery (14).webp" alt="Momento 14" loading="lazy">
                         </div>
                         <div class="slide">
-                            <img src="gallery/Gallery (15).webp" alt="Momento 5"
-                                onerror="this.src='https://via.placeholder.com/1200x800/5C0A0A/D4AF37?text=Galeria+5'">
+                            <img src="gallery/Gallery (15).webp" alt="Momento 15" loading="lazy">
                         </div>
                         <div class="slide">
-                            <img src="gallery/Gallery (16).webp" alt="Momento 5"
-                                onerror="this.src='https://via.placeholder.com/1200x800/5C0A0A/D4AF37?text=Galeria+5'">
+                            <img src="gallery/Gallery (16).webp" alt="Momento 16" loading="lazy">
                         </div>
                         <div class="slide">
-                            <img src="gallery/Gallery (17).webp" alt="Momento 5"
-                                onerror="this.src='https://via.placeholder.com/1200x800/5C0A0A/D4AF37?text=Galeria+5'">
+                            <img src="gallery/Gallery (17).webp" alt="Momento 17" loading="lazy">
                         </div>
                         <div class="slide">
-                            <img src="gallery/Gallery (18).webp" alt="Momento 5"
-                                onerror="this.src='https://via.placeholder.com/1200x800/5C0A0A/D4AF37?text=Galeria+5'">
+                            <img src="gallery/Gallery (18).webp" alt="Momento 18" loading="lazy">
                         </div>
 
                     </div>
 
-                    <button class="slider-nav prev" onclick="moveSlide(-1)" aria-label="Anterior">â€¹</button>
-                    <button class="slider-nav next" onclick="moveSlide(1)" aria-label="Siguiente">â€º</button>
-
-                    <div class="slider-dots" id="sliderDots"></div>
+                    <button type="button" class="slider-nav prev" aria-label="Foto anterior">‹</button>
+                    <button type="button" class="slider-nav next" aria-label="Foto siguiente">›</button>
+                </div>
+                <div class="gallery-controls">
+                    <div class="slider-dots" id="sliderDots" role="group" aria-label="Elegir foto"></div>
+                    <button type="button" class="gallery-playback" id="galleryPlayback">Pausar galería</button>
+                    <p class="visually-hidden" id="galleryStatus" aria-live="polite"></p>
                 </div>
             </div>
         </section>
 
         <!-- Bolsas Navideñas Section -->
-        <section class="card-section" id="bolsas">
+        <section class="card-section solidarity" id="bolsas">
             <div class="card-container">
                 <div class="card-header-center">
                     <h2 class="card-title">Bolsas Navideñas</h2>
@@ -437,7 +398,8 @@
             </div>
         </section>
 
-    </div>
+        </div>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
