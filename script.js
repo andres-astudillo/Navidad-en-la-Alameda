@@ -1,3 +1,26 @@
+const intro = document.getElementById('siteIntro');
+if (document.documentElement.classList.contains('is-introducing')) {
+    const heroLogo = document.querySelector('.hero-logo');
+    const positionIntro = () => {
+        const logo = heroLogo.getBoundingClientRect();
+        // The center of the star is 36% across and 35% down the original artwork.
+        intro.style.setProperty('--intro-x', (logo.left + logo.width * 0.36) + 'px');
+        intro.style.setProperty('--intro-y', (logo.top + logo.height * 0.35) + 'px');
+    };
+    positionIntro();
+    document.fonts.ready.then(positionIntro);
+
+    intro.addEventListener('animationend', event => {
+        if (event.target === intro) document.documentElement.classList.remove('is-introducing');
+    });
+}
+
+const specialVideoPlayer = document.getElementById('specialVideoPlayer');
+if (specialVideoPlayer && ['http:', 'https:'].includes(window.location.protocol)) {
+    specialVideoPlayer.replaceWith(specialVideoPlayer.content);
+    document.getElementById('specialVideoLink').remove();
+}
+
 const navbar = document.getElementById('navbar');
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
@@ -5,6 +28,7 @@ const mobileLayout = window.matchMedia('(max-width: 53rem)');
 
 function setMenuOpen(open) {
     navMenu.classList.toggle('active', open);
+    navbar.classList.toggle('menu-open', open);
     hamburger.setAttribute('aria-expanded', String(open));
 }
 
@@ -13,6 +37,9 @@ navMenu.addEventListener('click', event => {
     if (event.target.closest('a')) setMenuOpen(false);
 });
 document.addEventListener('click', event => {
+    if (!navbar.contains(event.target)) setMenuOpen(false);
+});
+document.addEventListener('focusin', event => {
     if (!navbar.contains(event.target)) setMenuOpen(false);
 });
 document.addEventListener('keydown', event => {

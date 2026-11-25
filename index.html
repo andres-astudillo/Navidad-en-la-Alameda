@@ -7,7 +7,7 @@
     <meta name="description"
         content="Conocé la agenda de Navidad en la Alameda, Mendoza, y anotate para el especial Nace la Esperanza.">
     <title>Nace la Esperanza | Navidad en la Alameda 2026</title>
-    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="icon" type="image/png" href="img/pesebre-dorado.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://navidadenmendoza.com/">
     <meta property="og:title" content="Nace la Esperanza | Navidad en la Alameda 2026">
@@ -15,18 +15,22 @@
         content="Agenda de diciembre, especial Nace la Esperanza y Navidad Solidaria en la Alameda, Mendoza.">
     <meta name="twitter:card" content="summary">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-
     <!-- Styles -->
+    <script>
+        if ((!location.hash || location.hash === '#inicio') &&
+            !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.documentElement.classList.add('is-introducing');
+        }
+    </script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <div class="site-intro" id="siteIntro" aria-hidden="true">
+        <div class="intro-curtain"></div>
+        <div class="intro-flare"></div>
+        <img class="intro-logo" src="img/logo-alameda.png" alt="">
+    </div>
     <!-- Navigation -->
     <a class="skip-link" href="#inicio">Saltar al contenido</a>
     <nav class="navbar" id="navbar" aria-label="Navegación principal">
@@ -51,6 +55,7 @@
             </ul>
         </div>
     </nav>
+    <div class="mobile-menu-backdrop" aria-hidden="true"></div>
 
     <main id="inicio" tabindex="-1">
         <section class="hero" aria-labelledby="hero-title">
@@ -114,9 +119,9 @@
                     <li>
                         <p class="agenda-date">12 de diciembre</p>
                         <div>
-                            <h3 class="event-title">Navidad en el Desierto</h3>
-                            <p class="agenda-time">Sábado 12 · 20:30 h · San José, Lavalle</p>
-                            <p class="agenda-detail">Una celebración junto a la comunidad originaria.</p>
+                            <h3 class="event-title"><a href="#desierto">Navidad en el Desierto</a></h3>
+                            <p class="agenda-time">Sábado 12 · Desierto de Lavalle</p>
+                            <p class="agenda-detail">Preparativos desde la mañana. Especial a las 20:30 h en San José.</p>
                         </div>
                     </li>
                     <li>
@@ -156,16 +161,31 @@
                     <p class="card-description">La música, la danza, el teatro y el lenguaje visual conectan
                         el nacimiento de Jesús en Belén con los desafíos de hoy: la ternura frente a la violencia,
                         la esperanza frente al escepticismo y el valor de la familia.</p>
-                    <p class="card-description">La entrada es libre y gratuita. El enlace de registro para reservar
-                        asiento todavía no está disponible. Llegá temprano para disfrutar las experiencias previas,
-                        estacionar con tiempo y elegir tu lugar.</p>
-                    <a class="btn special-registration" href="https://wa.me/5492615178081">Consultar por la inscripción</a>
+                    <p class="card-description">La entrada es libre y gratuita. Llegá temprano para disfrutar las
+                        experiencias previas, estacionar con tiempo y elegir tu lugar.</p>
+                    <p class="card-description">Haz click en el siguiente botón para adelantar tu participación</p>
+                    <a class="btn special-registration" href="https://igle.ar/navidad26">Adelanta tu asistencia</a>
                 </div>
                 <figure class="special-media">
                     <img src="img/especial-navidad-2026.jpg" width="1063" height="1063" loading="lazy"
                         alt="Cantantes, un pesebre viviente y un grupo de baile en el escenario de la Alameda">
                     <figcaption>Imágenes del Especial de Navidad en la Alameda</figcaption>
                 </figure>
+            </div>
+        </section>
+
+        <section class="card-section desert" id="desierto" aria-labelledby="desert-title">
+            <div class="card-container desert-content">
+                <h2 class="card-title" id="desert-title">Navidad en el Desierto</h2>
+                <p class="special-schedule"><time datetime="2026-12-12">12 de diciembre</time> · Desierto de Lavalle</p>
+                <p class="card-description">La esperanza también se comparte sirviendo. Se presentará el especial
+                    de Navidad: Nace la Esperanza en una versión adaptada para el lugar.</p>
+                <p class="card-description">Sumate desde la mañana para preparar el lugar, preparar las bolsas
+                    navideñas solidarias y recibir con un abrazo a las familias que caminan kilómetros por el
+                    campo con la expectativa de la invitación. Será un gran momento para presentar a Jesús.</p>
+                <p class="card-description">Poné tu vehículo a disposición u organizate con tus amigos para viajar
+                    y servir juntos.</p>
+                <a class="btn special-registration" href="https://igle.ar/desierto26">Confirmá tu asistencia</a>
             </div>
         </section>
 
@@ -177,13 +197,19 @@
                     <p class="card-subtitle">Volvé a ver una edición anterior del Especial de Navidad</p>
                 </div>
 
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/_5DDAqsZWkA?start=5425" title="Navidad en Mendoza" loading="lazy"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                    </iframe>
-                </div>
+                <template id="specialVideoPlayer">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/_5DDAqsZWkA?start=5425"
+                            title="Especial de Navidad en Mendoza" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </template>
+                <a class="btn video-link" id="specialVideoLink" href="https://www.youtube.com/watch?v=_5DDAqsZWkA&amp;t=5425s">
+                    Ver en YouTube
+                </a>
             </div>
         </section>
 
@@ -277,6 +303,7 @@
                         <h3 class="subsection-title">¿Cómo podés ayudar?</h3>
                         <p>Acercá tu donación al portal de entrada en cualquier reunión del fin de semana.
                             El equipo de <strong>Amor en Acción</strong> estará recibiendo los aportes.</p>
+                        <button class="btn solidarity-donation" type="button" disabled>Donar</button>
                     </div>
                     <div>
                         <h3 class="subsection-title">¿Qué podés donar?</h3>
