@@ -431,7 +431,42 @@ a { color: inherit; }
 .special-media img { width: 100%; height: auto; border-radius: .45rem; }
 .special-media figcaption { margin-top: .5rem; color: var(--muted); font-size: .875rem; }
 .desert { border-block: 1px solid var(--line); }
-.desert-content { max-width: 49rem; }
+.desert-banner {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    align-items: end;
+    min-height: clamp(20rem, 40vw, 31rem);
+    padding: clamp(1.1rem, 4vw, 3.5rem);
+    overflow: hidden;
+    border: 1px solid #e9bc8352;
+    border-radius: .45rem;
+    background: var(--deep);
+}
+.desert-photo, .desert-banner::after {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+.desert-photo {
+    object-fit: cover;
+    object-position: 65% center;
+}
+.desert-banner::after {
+    content: "";
+    background: linear-gradient(0deg, #061427f5, #06142754 48%, transparent 75%),
+        linear-gradient(90deg, #061427ab, transparent 66%);
+}
+.desert-heading {
+    position: relative;
+    z-index: 1;
+    max-width: 35rem;
+}
+.desert-content {
+    max-width: 49rem;
+    margin: clamp(1.5rem, 4vw, 2.75rem) auto 0;
+}
 
 /* Video and gallery */
 #video { background: var(--deep); }
@@ -643,6 +678,8 @@ a { color: inherit; }
     .hero-title { font-size: clamp(3.8rem, 13vw, 5.4rem); }
     .hero-edition { font-size: .8125rem; letter-spacing: .085em; }
     .agenda li, .contact-grid, .solidarity-layout, .special-layout { grid-template-columns: 1fr; }
+    .desert-banner { min-height: clamp(16.5rem, 68vw, 19.5rem); }
+    .desert-heading .card-title { font-size: clamp(2.3rem, 8vw, 3.25rem); }
     .contact-grid { gap: 1.35rem; }
     .contact-card { padding-right: 1.75rem; }
     .slide { aspect-ratio: 4 / 3; }
