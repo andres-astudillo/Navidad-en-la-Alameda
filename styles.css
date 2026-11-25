@@ -553,7 +553,7 @@ a { color: inherit; }
     color: var(--gold);
     font-size: 1.125rem;
 }
-.btn.solidarity-donation:not(:disabled):hover {
+.btn.solidarity-donation:hover {
     background: var(--blue);
 }
 .items-grid {
